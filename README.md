@@ -4,6 +4,9 @@
 
 Go to : https://netflix-clone-20328.web.app/
 
+test email : test@test.com
+test pass  : 123456
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 
 ## Development server
