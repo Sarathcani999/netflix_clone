@@ -1,0 +1,40 @@
+<!-- 
+<div class="form" *ngIf="!isLoding">
+	<form #authForm="ngForm" (ngSubmit)="onRegister(authForm)" class="form-group p-2">
+	
+		<input type="text" class="form-control" ngModel placeholder="email" name="email"  ><br>
+		<input type="password" class="form-control" ngModel placeholder="password" name="password" ><br>
+
+		<button type="submit" class="btn btn-primary" [disabled]="!authForm.valid">Register</button>
+	</form>
+
+</div> -->
+
+<div class="bg">
+
+	<div class="bg-fade">
+	</div>
+	
+	<app-loading *ngIf="isLoding"></app-loading>
+	<div class="center" *ngIf="!isLoding">
+
+		<h1>Sign Up</h1>
+		<form #authForm="ngForm" (ngSubmit)="onRegister(authForm)">
+			<div class="text-field">
+				<input type="text" ngModel name="email" required email > 
+				<label>Email</label>
+			</div>
+			<div class="text-field">
+				<input type="password" ngModel name="password" required minlength="6"> 
+				<label>Password</label>
+			</div>
+
+			<p class="err">{{errorMessage}}</p>
+
+			<button type="submit" [disabled]="!authForm.valid">Login</button>
+			<div class="signup-link">
+				Already a member ? <a [routerLink]="['/login']">Sign In</a>
+			</div>
+		</form>
+	</div>
+</div>

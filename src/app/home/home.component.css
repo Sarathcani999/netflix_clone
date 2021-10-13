@@ -1,0 +1,91 @@
+.row {
+}
+
+
+.row_poster {
+	object-fit: contain;
+	max-height: 150px;
+	margin-right: 7px;
+	transition: transform 450ms;
+	border-radius: 5px;
+	
+}
+
+.row_posters {
+	display:flex;
+	flex-direction: row;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding: 20px;
+}
+
+.row_poster:hover {
+	transform: scale(1.08);
+	cursor: pointer;
+	content: "Haoo";
+}
+
+.row_posters::-webkit-scrollbar {
+	display: none;
+}
+
+.row_posterLarge {
+	max-height: 250px;
+	margin-right: 12px;
+}
+
+.row { 
+	color: white;
+	margin-left: 20px;
+}
+
+/* BANNER */
+
+.banner_title {
+	margin : 0;
+	font-size: 3.3rem;
+}
+
+.banner_contents {
+	padding-top: 170px;
+	padding-left: 30px;
+}
+
+.banner_contents p {
+	font-family: sans-serif;
+	max-width: 80%;
+	margin: 0;
+	padding-top: 5px;
+}
+
+.banner_contents button {
+	font-weight: bold;
+	background-color: white;
+	border : none;
+	padding : 10px;
+	margin: 10px 0px;
+}
+
+.banner_contents button:hover {
+	background-color: red;
+	color: white;
+	cursor: pointer;
+}
+
+
+.banner {
+	background-image: url('../../assets/images/banner.jpg');
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	object-fit: contain;
+	height: 448px;
+	width: 100%;
+}
+
+.banner_bottomfade {
+	position: relative;
+	bottom: 0;
+	height: 100%;
+	background-image: linear-gradient(180deg , transparent , rgba(37,37,37,0.61) , #111);
+}

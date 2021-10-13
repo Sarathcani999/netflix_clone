@@ -1,0 +1,142 @@
+<!-- Banner -->
+<div class="banner">
+
+
+	<div class="banner_bottomfade">
+		<div class="banner_contents">
+			<h1 class="banner_title">Merlin</h1>
+			<button class="banner_button" [routerLink]="['/tv/7225']">Watch</button>
+
+			<p>
+				This is a story of young Merlin, a simple servant to young Prince Arthur in royal court of Camelot. They soon became best friends, but Merlin has a secret: he's a mighty sorcerer who has to hide his magical powers even from Arthur, so that he can stay alive.
+			</p>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- Trending Movies -->
+
+<div class="row">
+	<h2>Popular Movies</h2>
+
+	<div class="row_posters" >
+		<div *ngFor="let movie of popularMovies">
+			<a href="/movie/{{movie.id}}">			
+				<img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="row_poster row_posterLarge" (click)="goToMovie(movie.id)">
+			</a>
+			<p >{{movie.title}}</p>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<h2>Top Rated Movies</h2>
+
+	<div class="row_posters" >
+		<div *ngFor="let movie of topRatedMovies">
+			<a href="/movie/{{movie.id}}">			
+				<img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="row_poster" (click)="goToMovie(movie.id)">
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<h2>Now Playing</h2>
+
+	<div class="row_posters" >
+		<div *ngFor="let movie of nowPlaying">
+			<a href="/movie/{{movie.id}}">			
+				<img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="row_poster" (click)="goToMovie(movie.id)">
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<h2>Upcoming</h2>
+
+	<div class="row_posters" >
+		<div *ngFor="let movie of upcoming">
+			<a href="/movie/{{movie.id}}">			
+				<img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="row_poster" (click)="goToMovie(movie.id)">
+			</a>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 
+<div class="row">
+	<h2>Trending Movies</h2>
+
+	<div class="row_posters">
+		<img src="../../assets/images/movie1.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie2.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie3.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie4.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie5.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie1.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie2.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie3.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie4.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie5.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie1.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie2.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie3.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie4.jpg" class="row_poster row_posterLarge">
+		<img src="../../assets/images/movie5.jpg" class="row_poster row_posterLarge">
+	</div>
+</div>
+ -->
+<!-- Top rated -->
+<!-- <div class="row">
+	<h2>Top Rated</h2>
+
+	<div class="row_posters">
+		<img src="../../assets/images/movie1.jpg" class="row_poster">
+		<img src="../../assets/images/movie2.jpg" class="row_poster">
+		<img src="../../assets/images/movie3.jpg" class="row_poster">
+		<img src="../../assets/images/movie4.jpg" class="row_poster">
+		<img src="../../assets/images/movie5.jpg" class="row_poster">
+		<img src="../../assets/images/movie1.jpg" class="row_poster">
+		<img src="../../assets/images/movie2.jpg" class="row_poster">
+		<img src="../../assets/images/movie3.jpg" class="row_poster">
+		<img src="../../assets/images/movie4.jpg" class="row_poster">
+		<img src="../../assets/images/movie5.jpg" class="row_poster">
+		<img src="../../assets/images/movie1.jpg" class="row_poster">
+		<img src="../../assets/images/movie2.jpg" class="row_poster">
+		<img src="../../assets/images/movie3.jpg" class="row_poster">
+		<img src="../../assets/images/movie4.jpg" class="row_poster">
+		<img src="../../assets/images/movie5.jpg" class="row_poster">
+	</div>
+</div> -->
+
+
+<!-- Feel Good movies -->
+<!-- <div class="row">
+	<h2>Feel Good movies</h2>
+
+	<div class="row_posters">
+		<img src="../../assets/images/movie1.jpg" class="row_poster">
+		<img src="../../assets/images/movie2.jpg" class="row_poster">
+		<img src="../../assets/images/movie3.jpg" class="row_poster">
+		<img src="../../assets/images/movie4.jpg" class="row_poster">
+		<img src="../../assets/images/movie5.jpg" class="row_poster">
+		<img src="../../assets/images/movie1.jpg" class="row_poster">
+		<img src="../../assets/images/movie2.jpg" class="row_poster">
+		<img src="../../assets/images/movie3.jpg" class="row_poster">
+		<img src="../../assets/images/movie4.jpg" class="row_poster">
+		<img src="../../assets/images/movie5.jpg" class="row_poster">
+		<img src="../../assets/images/movie1.jpg" class="row_poster">
+		<img src="../../assets/images/movie2.jpg" class="row_poster">
+		<img src="../../assets/images/movie3.jpg" class="row_poster">
+		<img src="../../assets/images/movie4.jpg" class="row_poster">
+		<img src="../../assets/images/movie5.jpg" class="row_poster">
+	</div>
+</div> -->

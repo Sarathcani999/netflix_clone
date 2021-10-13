@@ -1,0 +1,106 @@
+.home {
+	margin-top: 30px;
+	text-decoration: none;
+	color: white;
+	margin-left: 30px;
+}
+
+a:hover {
+	color: red;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	color: white;
+}
+
+.col {
+	display: flex;
+	color: white;
+	flex-direction: column;
+}
+
+.my {
+	margin : 60px 20px;
+}
+
+.poster {
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	object-fit: contain;
+	height: 100vh;
+	width: 100%;
+}
+
+.center {
+	align-items: center;
+	justify-content: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.bottom_fade {
+	position: relative;
+	bottom: 0;
+	height: 100%;
+	background-image: linear-gradient(180deg , transparent , rgba(37,37,37,0.61) , #111);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bottom_fade a {
+	padding-top: 50px;
+}
+
+.contents {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.lang {
+	border: 1px solid white;
+	border-radius: 3px;
+	padding: 2px 3px;
+	color: red;
+	background: white;
+}
+
+.row_poster {
+	object-fit: contain;
+	max-height: 150px;
+	margin-right: 7px;
+	transition: transform 450ms;
+	border-radius: 5px;
+	
+}
+
+.row_posters {
+	display:flex;
+	flex-direction: row;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding: 20px;
+}
+
+.row_poster:hover {
+	transform: scale(1.08);
+	cursor: pointer;
+	content: "Haoo";
+}
+
+.row_posters::-webkit-scrollbar {
+	display: none;
+}
+
+.row_posterLarge {
+	max-height: 250px;
+	margin-right: 12px;
+}
+
+.ml {
+	margin-left: 20px;
+}

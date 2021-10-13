@@ -1,0 +1,31 @@
+<div class="col">
+	<div class="row center">
+		<div class="poster" style="background-image: url('https://image.tmdb.org/t/p/original/{{imagePath}}')">
+		<!-- <img src="https://image.tmdb.org/t/p/original/{{imagePath}}" alt="" class="poster"> -->
+		<div class="bottom_fade">
+			<!-- <a class="home" [routerLink]="['/home']" >Home</a> -->
+			<p></p>
+			<div class="contents">
+				<h1>{{movieName}}</h1>
+				<p>
+					{{desc}}
+				</p>
+				<p> <span class="lang">{{lang }}</span> | {{votes}} votes</p>
+			</div>
+		</div>
+
+		</div>
+	</div>
+	
+</div>
+<div class="col ml">
+		<h2>Popular Movies</h2> <br>
+
+		<div class="row_posters" >
+			<div *ngFor="let movie of popularMovies">
+				<a href="/movie/{{movie.id}}">			
+					<img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="row_poster row_posterLarge">
+				</a>
+			</div>
+		</div>
+	</div>

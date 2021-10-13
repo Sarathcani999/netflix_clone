@@ -1,0 +1,28 @@
+<div class="bg">
+
+	<div class="bg-fade">
+	</div>
+	
+	<app-loading *ngIf="isLoading"></app-loading>
+	<div class="center" *ngIf="!isLoading">
+
+		<h1>Sign In</h1>
+		<form #authForm="ngForm" (ngSubmit)="onLogin(authForm)">
+			<div class="text-field">
+				<input type="text" ngModel name="email" required email > 
+				<label>Email</label>
+			</div>
+			<div class="text-field">
+				<input type="password" ngModel name="password" required minlength="6"> 
+				<label>Password</label>
+			</div>
+
+			<p class="err">{{errorMessage}}</p>
+
+			<button type="submit" [disabled]="!authForm.valid">Login</button>
+			<div class="signup-link">
+				Not a member ? <a [routerLink]="['/']">Sign Up</a>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<nav nav>
+	<div class="nav-container">
+
+		<div class="nav-left center">
+			<img [routerLink]="['/home']" src="../../assets/netflixlogo.png" class="logo">
+		</div>
+		<div class="nav-right center">
+			<img *ngIf="isAuth" (click)="onOpenUserProfile()" class="avatar" src="../../assets/images/avatar.png">
+		</div>
+	</div>
+</nav>
+
+<app-alert *ngIf="userProfile" (close)="closeModal()"></app-alert>

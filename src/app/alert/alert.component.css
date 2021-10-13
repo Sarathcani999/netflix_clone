@@ -1,0 +1,84 @@
+.bg-fade {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.85);
+	z-index: 50;
+}
+
+.modal {
+	position: fixed;
+	top: 30vh;
+	left: 30vw;
+	height: 40vh;
+	width: 40vw;
+	z-index: 100;
+	background: #221F1F;
+	/*background: black;*/
+	border-radius: 5px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+	display: flex;
+	flex-direction: column;
+}
+
+.modal .top {
+	text-align: right;
+	height: 50px;
+}
+
+.close {
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: red;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.user-details {
+	display: flex;
+	justify-content: center;
+}
+
+.user-details img {
+	height: 100px;
+}
+
+.logout {
+	margin: 20px 30px;
+	padding: 10px;
+	border : none;
+	border-radius: 5px;
+	background: red;
+	font-weight: bold;
+	color: white;
+
+}
+
+.logout:hover {
+	cursor: pointer;
+}
+
+.modal p {
+	text-align: center;
+	color: white;
+}
